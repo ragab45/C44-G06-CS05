@@ -5,8 +5,144 @@
         static void Main(string[] args)
         {
             #region Video_1
+           // EX-1
+            int[] numbers;
 
+            //Console.WriteLine(numbers[0]);
+            numbers = new int[3];
+
+            // Initialize With Default Value [0, 0, 0]
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
+
+            numbers[0] = 10;
+            numbers[1] = 20;
+            numbers[2] = 30;
+            // [10, 20, 30]
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
+            // EX- 2
+            int[] numbeers; // Assuming 'numbers' array is declared and initialized earlier in the actual code.
+                           // For this snippet, let's re-initialize it to match the context.
+            numbers = new int[3];
+
+            numbers[0] = 10;
+            numbers[1] = 20;
+            numbers[2] = 30;
+            // [10, 20, 30]
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
+
+            //Console.WriteLine($"Size Of Array => {numbers.Length}");
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    Console.WriteLine(numbers[i]);
+            //}
+
+            foreach (int i in numbers)
+            {
+                Console.WriteLine(i);
+            }
             #endregion;
+
+            #region Video_3
+            // EX-1
+            int[,] marks = new int[2, 5]
+    {
+        { 90, 80, 80, 60, 70 },
+        { 100, 60, 80, 60, 90 }
+    };
+
+            //marks[0, 0] = 0;
+            //marks[0, 1] = 10;
+            //marks[0, 2] = 20;
+            //marks[0, 3] = 30;
+            //marks[0, 4] = 50;
+            //marks[1, 0] = 0;
+            //marks[1, 1] = 10;
+            //marks[1, 2] = 20;
+            //marks[1, 3] = 30; // This line is cut off in the image but logically follows the pattern
+            //marks[1, 4] = 50;
+
+            //EX-2
+            // Assuming 'marks' array is declared and initialized from the previous image context:
+            // int[,] marks = new int[2, 5]
+            // {
+            //     { 90, 80, 80, 60, 70 },
+            //     { 100, 60, 80, 60, 90 }
+            // };
+
+            // The code snippet starts with a loop for printing separators, then clears the console, then prints grades.
+
+            for (int i = 0; i < marks.GetLength(0); i++)
+            {
+                Console.WriteLine("===================");
+            }
+
+            Console.Clear(); // Clears the console output
+
+            // Print
+            for (int i = 0; i < marks.GetLength(0); i++)
+            {
+                Console.WriteLine($"The Grades Of Student Number {i + 1}");
+                for (int j = 0; j < marks.GetLength(1); j++)
+                {
+                    Console.WriteLine($"The Grade Of Subject Number {j + 1} => {marks[i, j]}");
+                }
+                Console.WriteLine("===================");
+            }
+            #endregion
+
+            #region  Video_4
+            int[][] jaggedArray = new int[4][]
+           {
+                new int[] {1, 4, 5, 6},
+                new int[] {2, 5, 7},
+                new int[] {8},
+                new int[] {3, 6, 9, 8, 7, 4}
+           };
+
+            // This line below (jaggedArray[0] = {1, 4, 5, 6};) is commented out in the image,
+            // but the intent seems to be to show how to initialize or re-assign an inner array.
+            // However, the correct syntax for direct assignment like this would be:
+            // jaggedArray[0] = new int[] {1, 4, 5, 6};
+            // The image shows an error because direct array literal assignment (like {1, 4, 5, 6})
+            // is only allowed during the initial declaration.
+            // jaggedArray[0] = {1, 4, 5, 6}; // This line would cause a compile-time error as shown in the IDE.
+
+
+            #endregion
+
+            #region Video_5
+            // The image shows a part of the Main method within a Program class.
+            // It's under an "Arrays" section, specifically demonstrating "Array Methods".
+
+            // Assuming the previous regions (1D Array, 2D Array, Jagged Array)
+            // would be placed above this section in a complete program.
+
+            // Arrays
+            #region Array Methods
+            int[] nuwmbers = { 8, 7, 6, 9, 5, 1, 2, 6, 4 };
+
+            // These lines are commented out in the image, showing potential methods:
+            //Array.Sort(numbers);
+            //Array.Reverse(numbers);
+            //Array.Clear(numbers, 3, 2);
+            //Console.WriteLine(Array.IndexOf(numbers, 6));
+            //Console.WriteLine(Array.LastIndexOf(numbers, 6));
+
+            Array.Resize(ref numbers, 20); // Resizes the 'numbers' array to hold 20 elements.
+
+            // This foreach loop is commented out, but would print the elements of the resized array:
+            //foreach (int number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+            #endregion
         }
     }
 }
