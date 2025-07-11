@@ -49,6 +49,26 @@
 
             Console.WriteLine($"Max: {max}, Min: {min}");
             #endregion
+            #region Q-5
+            int[] arr = { 10, 20, 30, 40, 50, 50 };
+            int largest = int.MinValue, second = int.MinValue;
+
+            foreach (int num in arr)
+            {
+                if (num > largest)
+                {
+                    second = largest;
+                    largest = num;
+                }
+                else if (num > second && num != largest)
+                {
+                    second = num;
+                }
+            }
+
+            Console.WriteLine($"Second largest: {second}");
+            #endregion
+
         }
     }
 }
