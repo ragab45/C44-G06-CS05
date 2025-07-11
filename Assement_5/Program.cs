@@ -26,6 +26,17 @@
 
             Console.WriteLine($"Sum of array elements: {sum}");
             #endregion
+            #region Q-3
+            int[] arr1 = { 2, 4, 6 };
+            int[] arr2 = { 1, 3, 5 };
+            int[] merged = new int[arr1.Length + arr2.Length];
+
+            arr1.CopyTo(merged, 0);
+            arr2.CopyTo(merged, arr1.Length);
+
+            Array.Sort(merged);
+            Console.WriteLine("Merged and sorted array: " + string.Join(", ", merged));
+            #endregion
         }
     }
 }
