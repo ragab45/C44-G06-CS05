@@ -103,32 +103,40 @@
             //Console.WriteLine(string.Join(" ", words));
             #endregion
             #region Q-8
-            int[,] first = new int[2, 2];
-            int[,] second = new int[2, 2];
+            //int[,] first = new int[2, 2];
+            //int[,] second = new int[2, 2];
 
-            Console.WriteLine("Enter 4 values for 2x2 array:");
-            for (int i = 0; i < 2; i++)
+            //Console.WriteLine("Enter 4 values for 2x2 array:");
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    for (int j = 0; j < 2; j++)
+            //    {
+            //        Console.Write($"[{i},{j}]: ");
+            //        first[i, j] = int.Parse(Console.ReadLine());
+            //        second[i, j] = first[i, j]; // Copying
+            //    }
+            //}
+
+            //Console.WriteLine("Second array:");
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    for (int j = 0; j < 2; j++)
+            //    {
+            //        Console.Write(second[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            #endregion
+            #region Q-9
+
+
+            int[] arr = { 10, 20, 30, 40, 50 };
+
+            for (int i = arr.Length - 1; i >= 0; i--)
             {
-                for (int j = 0; j < 2; j++)
-                {
-                    Console.Write($"[{i},{j}]: ");
-                    first[i, j] = int.Parse(Console.ReadLine());
-                    second[i, j] = first[i, j]; // Copying
-                }
+                Console.Write(arr[i] + " ");
             }
-
-            Console.WriteLine("Second array:");
-            for (int i = 0; i < 2; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-                    Console.Write(second[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-                #endregion
-
-
-            }
+            #endregion
         }
+    }
 }
