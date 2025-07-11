@@ -17,5 +17,15 @@
                 Console.WriteLine();
                 #endregion
             }
+            #region Q-2
+            int[] arr = { 2, 4, 6, 8, 10 };
+            int sum = 0;
+
+            foreach (int num in arr)
+                sum += num;
+
+            Console.WriteLine($"Sum of array elements: {sum}");
+            #endregion
+        }
     }
 }
