@@ -49,7 +49,7 @@
             }
             #endregion;
 
-            #region Video_2
+            #region Video_3
             // EX-1
             int[,] marks = new int[2, 5]
     {
@@ -95,6 +95,26 @@
                 }
                 Console.WriteLine("===================");
             }
+            #endregion
+
+            #region  Video_4
+            int[][] jaggedArray = new int[4][]
+           {
+                new int[] {1, 4, 5, 6},
+                new int[] {2, 5, 7},
+                new int[] {8},
+                new int[] {3, 6, 9, 8, 7, 4}
+           };
+
+            // This line below (jaggedArray[0] = {1, 4, 5, 6};) is commented out in the image,
+            // but the intent seems to be to show how to initialize or re-assign an inner array.
+            // However, the correct syntax for direct assignment like this would be:
+            // jaggedArray[0] = new int[] {1, 4, 5, 6};
+            // The image shows an error because direct array literal assignment (like {1, 4, 5, 6})
+            // is only allowed during the initial declaration.
+            // jaggedArray[0] = {1, 4, 5, 6}; // This line would cause a compile-time error as shown in the IDE.
+
+
             #endregion
         }
     }
