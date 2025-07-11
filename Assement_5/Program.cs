@@ -37,6 +37,18 @@
             Array.Sort(merged);
             Console.WriteLine("Merged and sorted array: " + string.Join(", ", merged));
             #endregion
+            #region Q-4
+            int[] arr = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            int max = arr[0], min = arr[0];
+
+            foreach (int val in arr)
+            {
+                if (val > max) max = val;
+                if (val < min) min = val;
+            }
+
+            Console.WriteLine($"Max: {max}, Min: {min}");
+            #endregion
         }
     }
 }
