@@ -116,6 +116,33 @@
 
 
             #endregion
+
+            #region Video_5
+            // The image shows a part of the Main method within a Program class.
+            // It's under an "Arrays" section, specifically demonstrating "Array Methods".
+
+            // Assuming the previous regions (1D Array, 2D Array, Jagged Array)
+            // would be placed above this section in a complete program.
+
+            // Arrays
+            #region Array Methods
+            int[] nuwmbers = { 8, 7, 6, 9, 5, 1, 2, 6, 4 };
+
+            // These lines are commented out in the image, showing potential methods:
+            //Array.Sort(numbers);
+            //Array.Reverse(numbers);
+            //Array.Clear(numbers, 3, 2);
+            //Console.WriteLine(Array.IndexOf(numbers, 6));
+            //Console.WriteLine(Array.LastIndexOf(numbers, 6));
+
+            Array.Resize(ref numbers, 20); // Resizes the 'numbers' array to hold 20 elements.
+
+            // This foreach loop is commented out, but would print the elements of the resized array:
+            //foreach (int number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+            #endregion
         }
     }
 }
