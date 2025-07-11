@@ -68,7 +68,32 @@
 
             Console.WriteLine($"Second largest: {second}");
             #endregion
+            #region Q-6
+            Console.Write("Enter array elements (space separated): ");
+            string[] input = Console.ReadLine().Split();
+            int[] arr = Array.ConvertAll(input, int.Parse);
 
+            Dictionary<int, int> firstIndex = new();
+            int maxDistance = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (firstIndex.ContainsKey(arr[i]))
+                {
+                    int distance = i - firstIndex[arr[i]] - 1;
+                    if (distance > maxDistance)
+                        maxDistance = distance;
+                }
+                else
+                {
+                    firstIndex[arr[i]] = i;
+                }
+            }
+
+            Console.WriteLine($"Longest distance between two equal cells: {maxDistance}");
         }
+        #endregion  
+
     }
+}
 }
